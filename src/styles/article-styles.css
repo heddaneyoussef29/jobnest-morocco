@@ -1,0 +1,651 @@
+/* ============================================
+   Article Styling System - Smart Design
+   ============================================ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   Base Article Container
+   ============================================ */
+.article-styled {
+  font-family: 'Noto Naskh Arabic', serif;
+  line-height: 1.9;
+  color: #1a1a2e;
+}
+
+/* ============================================
+   Headings Styling
+   ============================================ */
+.article-styled h1 {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.article-styled h2 {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: #0d9488;
+  margin: 50px 0 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #e0f2fe;
+  position: relative;
+}
+
+.article-styled h2::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #0d9488, #14b8a6);
+}
+
+.article-styled h3 {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  color: #1e293b;
+  margin: 35px 0 18px;
+  padding-right: 15px;
+  border-right: 4px solid #14b8a6;
+}
+
+.article-styled h4 {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  color: #334155;
+  margin: 25px 0 15px;
+}
+
+/* ============================================
+   Paragraphs
+   ============================================ */
+.article-styled p {
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 2;
+  color: #374151;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* ============================================
+   Lists Styling
+   ============================================ */
+.article-styled ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.article-styled ul li {
+  position: relative;
+  padding: 12px 15px 12px 15px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+  border-radius: 12px;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.8;
+  color: #4b5563;
+  transition: all 0.2s ease;
+  padding-right: 35px;
+}
+
+.article-styled ul li:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.1);
+}
+
+.article-styled ul li::before {
+  content: '✓';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #10b981;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.article-styled ol {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.article-styled ol li {
+  position: relative;
+  padding: 12px 15px 12px 15px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.8;
+  color: #4b5563;
+  transition: all 0.2s ease;
+  padding-right: 40px;
+}
+
+.article-styled ol li:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.1);
+}
+
+.article-styled ol li::before {
+  content: counter(article-counter);
+  counter-increment: article-counter;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.article-styled ol {
+  counter-reset: article-counter;
+}
+
+/* ============================================
+   Blockquote / Highlight Box
+   ============================================ */
+.article-styled blockquote {
+  background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+  border-right: 5px solid #14b8a6;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin: 30px 0;
+  position: relative;
+  font-style: normal;
+}
+
+.article-styled blockquote::before {
+  content: '💡';
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 28px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-styled blockquote p {
+  margin-bottom: 0;
+  color: #0f766e;
+  font-weight: 500;
+}
+
+/* ============================================
+   Images Styling
+   ============================================ */
+.article-styled img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 30px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.article-styled img:hover {
+  transform: scale(1.02);
+}
+
+/* Image with caption */
+.article-styled figure {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.article-styled figure img {
+  margin-bottom: 10px;
+}
+
+.article-styled figcaption {
+  color: #6b7280;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ============================================
+   Links Styling
+   ============================================ */
+.article-styled a {
+  color: #0d9488;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.article-styled a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0d9488, #14b8a6);
+  transition: width 0.3s ease;
+}
+
+.article-styled a:hover {
+  color: #059669;
+}
+
+.article-styled a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   Tables Styling
+   ============================================ */
+.article-styled table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.article-styled th {
+  background: linear-gradient(135deg, #0d9488, #14b8a6);
+  color: white;
+  padding: 15px;
+  text-align: right;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 600;
+}
+
+.article-styled td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.article-styled tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.article-styled tr:hover {
+  background: #f0fdfa;
+}
+
+/* ============================================
+   Code Blocks
+   ============================================ */
+.article-styled code {
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #e11d48;
+}
+
+.article-styled pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.article-styled pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* ============================================
+   Horizontal Rule
+   ============================================ */
+.article-styled hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+  margin: 40px 0;
+}
+
+/* ============================================
+   Strong and Emphasis
+   ============================================ */
+.article-styled strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.article-styled em {
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* ============================================
+   Smart Card Component
+   ============================================ */
+.smart-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 25px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.smart-card:hover {
+  border-color: #14b8a6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(20, 184, 166, 0.15);
+}
+
+.smart-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #14b8a6, #0d9488, #059669);
+}
+
+.smart-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.smart-card-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+  flex-shrink: 0;
+}
+
+.smart-card-title {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.smart-card-description {
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.smart-card-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.smart-card-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: #f0fdfa;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0f766e;
+}
+
+.smart-card-feature::before {
+  content: '✓';
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* ============================================
+   CTA Button
+   ============================================ */
+.smart-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.4);
+}
+
+.smart-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.5);
+  background: linear-gradient(135deg, #0d9488, #059669);
+}
+
+.smart-cta-secondary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.smart-cta-secondary:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+}
+
+/* ============================================
+   FAQ Styling
+   ============================================ */
+.smart-faq {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.smart-faq-question {
+  background: #f8fafc;
+  padding: 20px 25px;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+}
+
+.smart-faq-answer {
+  padding: 20px 25px;
+  color: #4b5563;
+  line-height: 1.9;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ============================================
+   Info Box Variants
+   ============================================ */
+.info-box {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-right: 5px solid #3b82f6;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.info-box::before {
+  content: 'ℹ️';
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 28px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.warning-box {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-right: 5px solid #f59e0b;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.warning-box::before {
+  content: '⚠️';
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 28px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-right: 5px solid #22c55e;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.success-box::before {
+  content: '✅';
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 28px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Video Embed Styling
+   ============================================ */
+.video-embed {
+  position: relative;
+  margin: 30px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-embed iframe {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.video-embed[data-platform="tiktok"] iframe {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+.video-embed[data-platform="instagram"] iframe {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Video wrapper for responsive */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  .article-styled h2 {
+    margin: 35px 0 18px;
+  }
+
+  .article-styled h3 {
+    margin: 25px 0 12px;
+  }
+
+  .article-styled ul li,
+  .article-styled ol li {
+    padding: 10px 12px 10px 35px;
+  }
+
+  .article-styled blockquote {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .smart-card {
+    padding: 20px;
+  }
+
+  .smart-card-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  .article-styled {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .article-styled h2,
+  .article-styled h3 {
+    page-break-after: avoid;
+  }
+
+  .article-styled img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
